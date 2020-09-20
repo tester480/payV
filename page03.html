@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>payv 03</title>
+   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+   <div class="wrapper">
+      <div class="main-wrap">
+         <aside class="sidebar">
+            <a href="#" class="sidebar__logo"><img src="img/logo.png" alt="payv"></a>
+            <div class="sidebar__nav nav">
+               <a href="#" class="nav__item">
+                  <svg class="icon icon-stats"><use xlink:href="#icon-stats"></use>
+                     <symbol id="icon-stats" viewBox="0 0 27 32">
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6842" d="M4.187 19.994h-2.002c-0.276 0-0.501 0.224-0.501 0.501v9.010c0 0.277 0.224 0.501 0.501 0.501h2.002c0.276 0 0.501-0.224 0.501-0.501v-9.010c0-0.277-0.224-0.501-0.501-0.501z"></path>
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6842" d="M18.203 13.987h-2.002c-0.276 0-0.501 0.224-0.501 0.501v15.017c0 0.277 0.224 0.501 0.501 0.501h2.002c0.277 0 0.501-0.224 0.501-0.501v-15.017c0-0.276-0.224-0.501-0.501-0.501z"></path>
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6842" d="M25.211 6.979h-2.002c-0.277 0-0.501 0.224-0.501 0.501v22.025c0 0.277 0.224 0.501 0.501 0.501h2.002c0.277 0 0.501-0.224 0.501-0.501v-22.025c0-0.276-0.224-0.501-0.501-0.501z"></path>
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6842" d="M11.195 1.974h-2.002c-0.276 0-0.501 0.224-0.501 0.501v27.031c0 0.277 0.224 0.501 0.501 0.501h2.002c0.276 0 0.501-0.224 0.501-0.501v-27.031c0-0.276-0.224-0.501-0.501-0.501z"></path>
+                        </symbol>
+                  </svg>
+                  <span>Stats</span>
+               </a>
+               <a href="#" class="nav__item">
+                  <svg class="icon icon-promo"><use xlink:href="#icon-promo"></use>
+                     <symbol id="icon-promo" viewBox="0 0 32 32">
+                        <path stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M30 12.769h-10.75l-3.25-10.769-3.25 10.769h-10.75l8.75 6.462-3.375 10.769 8.625-6.731 8.625 6.731-3.375-10.769 8.75-6.462z"></path>
+                        </symbol>
+                  </svg>
+                  <span>Promo</span>
+               </a>
+               <a href="#" class="nav__item nav__item_active">
+                  <svg class="icon icon-tds"><use xlink:href="#icon-tds"></use>
+                     <symbol id="icon-tds" viewBox="0 0 32 32">
+                        <path stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M23.7 2h-15.4c-1.823 0-3.3 1.477-3.3 3.3v22c0 1.823 1.477 3.3 3.3 3.3h15.4c1.823 0 3.3-1.477 3.3-3.3v-22c0-1.823-1.477-3.3-3.3-3.3z"></path>
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M10.5 7.5h11"></path>
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M10.5 13h11"></path>
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M10.5 18.5h5.5"></path>
+                        </symbol>
+                  </svg>
+                  <span>TDS</span>
+               </a>
+               <a href="#" class="nav__item">
+                  <svg class="icon icon-payments"><use xlink:href="#icon-payments"></use>
+                     <symbol id="icon-payments" viewBox="0 0 32 32">
+                        <path stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.6842" d="M2.685 23.597h26.030c0.553 0 1.001-0.448 1.001-1.001v-14.016c0-0.553-0.448-1.001-1.001-1.001h-26.030c-0.553 0-1.001 0.448-1.001 1.001v14.016c0 0.553 0.448 1.001 1.001 1.001z"></path>
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6842" d="M16 18.526c1.86 0 3.368-1.508 3.368-3.368s-1.508-3.368-3.368-3.368c-1.86 0-3.368 1.508-3.368 3.368s1.508 3.368 3.368 3.368z"></path>
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6842" d="M29.716 12.585c-1.328 0-2.601-0.527-3.54-1.466s-1.466-2.212-1.466-3.54"></path>
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6842" d="M1.684 12.585c0.657 0 1.308-0.129 1.916-0.381s1.159-0.62 1.624-1.085c0.465-0.465 0.834-1.017 1.085-1.624s0.381-1.258 0.381-1.916"></path>
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6842" d="M29.716 18.592c-1.328 0-2.601 0.527-3.54 1.466s-1.466 2.212-1.466 3.54"></path>
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6842" d="M1.684 18.592c0.657 0 1.308 0.129 1.916 0.381s1.159 0.62 1.624 1.085c0.465 0.465 0.834 1.017 1.085 1.624s0.381 1.258 0.381 1.916"></path>
+                        </symbol>
+                  </svg>
+                  <span>Payments</span>
+               </a>
+               <a href="#" class="nav__item">
+                  <svg class="icon icon-referrals"><use xlink:href="#icon-referrals"></use>
+                     <symbol id="icon-referrals" viewBox="0 0 32 32">
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6842" d="M12.696 22.478h-4.405c-1.752 0-3.433-0.696-4.672-1.935s-1.935-2.92-1.935-4.672c0-1.752 0.696-3.433 1.935-4.672s2.92-1.935 4.672-1.935h4.405"></path>
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6842" d="M19.304 9.263h4.405c1.752 0 3.433 0.696 4.672 1.935s1.935 2.92 1.935 4.672-0.696 3.433-1.935 4.672c-1.239 1.239-2.92 1.935-4.672 1.935h-4.405"></path>
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6842" d="M9.619 15.87h12.899"></path>
+                        </symbol>
+                  </svg>
+                  <span>Referrals</span>
+               </a>
+               <a href="#" class="nav__item">
+                  <svg class="icon icon-profile"><use xlink:href="#icon-profile"></use>
+                     <symbol id="icon-profile" viewBox="0 0 32 32">
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.1333" d="M21.867 8.533c-0.261 3.525-2.933 6.4-5.867 6.4s-5.61-2.875-5.867-6.4c-0.267-3.667 2.333-6.4 5.867-6.4s6.133 2.8 5.867 6.4z"></path>
+                        <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="2.1333" d="M16 19.2c-5.8 0-11.687 3.2-12.776 9.24-0.131 0.728 0.281 1.427 1.043 1.427h23.467c0.763 0 1.175-0.699 1.043-1.427-1.090-6.040-6.977-9.24-12.777-9.24z"></path>
+                        </symbol>
+                  </svg>
+                  <span>Profile</span>
+               </a>
+            </div>
+            <div class="sidebar__bottom">
+               <a href="#" class="sidebar__logout">
+                  <img src="img/svg/logout.svg" alt="Log Out">
+                  <span>Log out</span>
+               </a>
+            </div>
+         </aside>
+         <article class="content">
+            <header class="header">
+               <div class="container">
+                  <div class="header__body">
+                     <div class="header__mobmenu">
+                        <div class="header__burger"><span></span></div>
+                     </div>
+                     <div class="header__item btn balance">
+                        <div class="balance__inner">
+                           <span>Balance: 0.00$</span>
+                           <div class="balance__body">
+                              <svg class="icon icon-arrow-up"><use xlink:href="#icon-arrow-up"></use>
+                                 <symbol id="icon-arrow-up" viewBox="0 0 32 32">
+                                    <path d="M14.751 7.111l-14.24 14.24c-0.33 0.329-0.511 0.769-0.511 1.238s0.182 0.908 0.511 1.238l1.048 1.049c0.683 0.682 1.794 0.682 2.476 0l11.958-11.958 11.971 11.971c0.33 0.329 0.769 0.511 1.238 0.511s0.908-0.182 1.238-0.511l1.048-1.049c0.33-0.33 0.511-0.769 0.511-1.238s-0.182-0.908-0.511-1.238l-14.253-14.254c-0.331-0.33-0.772-0.511-1.242-0.51-0.471-0.001-0.912 0.18-1.243 0.51z"></path>
+                                    </symbol>
+                              </svg>
+                              <svg class="icon icon-arrow-down"><use xlink:href="#icon-arrow-down"></use>
+                                 <symbol id="icon-arrow-down" viewBox="0 0 32 32">
+                                    <path d="M17.249 24.889l14.24-14.24c0.33-0.329 0.511-0.769 0.511-1.238s-0.182-0.908-0.511-1.238l-1.048-1.049c-0.683-0.682-1.794-0.682-2.476 0l-11.958 11.958-11.971-11.971c-0.33-0.329-0.769-0.511-1.238-0.511s-0.908 0.182-1.238 0.511l-1.048 1.049c-0.33 0.33-0.511 0.769-0.511 1.238s0.182 0.908 0.511 1.238l14.253 14.254c0.331 0.33 0.772 0.511 1.241 0.51 0.471 0.001 0.912-0.18 1.243-0.51z"></path>
+                                    </symbol>
+                              </svg>
+                           </div>
+                        </div>
+                        <div class="balance__dropdown">
+                           <div class="balance__item">Available: $0.00</div>
+                           <div class="balance__item">Total: $0.00</div>
+                        </div>
+                     </div>
+                     <a href="mailto:loremipsum@gmail.com" class="header__item btn mail">
+                        <svg class="icon icon-email"><use xlink:href="#icon-email"></use>
+                           <symbol id="icon-email" viewBox="0 0 32 32">
+                              <path d="M26.364 9.346l-10.363 9.132-10.365-9.132c-0.413-0.364-1.042-0.324-1.405 0.089s-0.324 1.042 0.089 1.405l11.023 9.712c0.188 0.166 0.423 0.248 0.658 0.248s0.47-0.083 0.658-0.249l11.021-9.712c0.412-0.363 0.452-0.993 0.089-1.405s-0.993-0.452-1.405-0.089z"></path>
+                              <path d="M29.013 5.115h-26.026c-1.647 0-2.987 1.34-2.987 2.987v15.797c0 1.647 1.34 2.987 2.987 2.987h26.026c1.647 0 2.987-1.34 2.987-2.987v-15.797c0-1.647-1.34-2.987-2.987-2.987zM30.009 23.898c0 0.549-0.447 0.996-0.996 0.996h-26.026c-0.549 0-0.996-0.447-0.996-0.996v-15.797c0-0.549 0.447-0.996 0.996-0.996h26.026c0.549 0 0.996 0.447 0.996 0.996v15.797z"></path>
+                              </symbol>
+                        </svg>
+                        <span>loremipsum@gmail.com</span>
+                     </a>
+                  </div>
+               </div>
+            </header>
+            <main class="main">
+               <section class="smartlink">
+                  <div class="smartlink__body">
+                     <div class="smartlink__content">
+                        <h1 class="smartlink__title">SmartLink for Global Mainstream traffic</h1>
+                        <div class="smartlink__list">
+                           <div class="smartlink__item smartlink-item">
+                              <div class="smartlink-item__top">Conversion Type:</div>
+                              <div class="smartlink-item__bottom">CPS</div>
+                           </div>
+                           <div class="smartlink__item smartlink-item">
+                              <div class="smartlink-item__top">Product Type:</div>
+                              <div class="smartlink-item__bottom">Entertainment</div>
+                           </div>
+                           <div class="smartlink__item smartlink-item">
+                              <div class="smartlink-item__top">Payout:</div>
+                              <div class="smartlink-item__bottom">70%</div>
+                           </div>
+                           <div class="smartlink__item smartlink-item">
+                              <div class="smartlink-item__top">Added On:</div>
+                              <div class="smartlink-item__bottom">2020-05-31</div>
+                           </div>
+                           <div class="smartlink__item smartlink-item">
+                              <div class="smartlink-item__top">Country Targeting:</div>
+                              <div class="smartlink-item__bottom">Responsive</div>
+                           </div>
+                           <div class="smartlink__item smartlink-item">
+                              <div class="smartlink-item__top">Device Targeting:</div>
+                              <div class="smartlink-item__bottom">Responsive</div>
+                           </div>
+                           <div class="smartlink__item smartlink-item">
+                              <div class="smartlink-item__top">Offer Description:</div>
+                              <div class="smartlink-item__bottom">Dynamic payout</div>
+                           </div>
+                           <div class="smartlink__item smartlink-item">
+                              <div class="smartlink-item__top">Device Targeting:</div>
+                              <div class="smartlink-item__bottom">https://chat-site.net/geo/main/</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="smartlink__img">
+                        <img src="img/smartlink-img.png" alt="Smartlink">
+                     </div>
+                  </div>
+               </section>
+               <section class="form">
+                  <div class="form__body">
+                     <form action="#" class="form__smartlink main-form">
+                        <div class="main-form__block first">
+                           <label for="#" class="main-form__label">Subaccount 1</label>
+                           <input type="text" class="main-form__input" placeholder="SUB1">
+                        </div>
+                        <div class="main-form__block second">
+                           <label for="#" class="main-form__label">Subaccount 2</label>
+                           <input type="text" class="main-form__input" placeholder="SUB2">
+                        </div>
+                        <div class="main-form__block third">
+                           <label for="#" class="main-form__label">Subaccount 3</label>
+                           <input type="text" class="main-form__input" placeholder="SUB3">
+                        </div>
+                        <div class="main-form__block">
+                           <label for="#" class="main-form__label">Product Landing Page</label>
+                           <input type="text" class="main-form__input" placeholder="Default Page">
+                        </div>
+                        <div class="main-form__block copy">
+                           <label for="#" class="main-form__label">Link</label>
+                           <input type="text" class="main-form__input copy" placeholder="https://payvclick.com?apiKey=Eez43g1B&site=1054">
+                           <button class="main-form__copy" type="button">
+                              <img src="img/svg/copy.svg" alt="Copy">
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+               </section>
+            </main>
+            <footer class="footer">
+               <div class="container">
+                  <div class="footer__body">
+                     <span class="footer__item">Copyright 2020 PayV All rights reserved</span>
+                     <a href="#" class="footer__item footer__link">Terms and Conditions</a>
+                     <a href="#" class="footer__item footer__link">Privacy Policy</a>
+                  </div>
+               </div>
+            </footer>
+         </article>
+      </div>
+   </div>
+
+   
+   <script src="js/libs.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+   <script src="js/main.js"></script>
+</body>
+</html>
