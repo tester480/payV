@@ -57,6 +57,21 @@ function searchHint() {
          }
       }
    });
+   $(".offer__input").on('click', function () {
+         var $parent = $(".offer");
+         if ($parent.hasClass('hint-show')) {
+            $parent.removeClass('hint-show');
+         } else {
+            $parent.addClass('hint-show');
+         }
+   }); 
+   $(".wrapper").on('click', function(event) {
+      if (!$(event.target).closest(".offer__input, .search__hint").length) {
+         if ($(".offer").hasClass("hint-show")) {
+            $(".offer").removeClass("hint-show");
+         }
+      }
+   });
 }
 
 function select() {
