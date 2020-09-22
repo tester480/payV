@@ -1,5 +1,6 @@
 $(document).ready(function(){
    mobBurger();
+   feedback();
    balanceDropdown();
    searchHint();
    select();
@@ -18,6 +19,24 @@ function mobBurger() {
       if (!$(event.target).closest(".header__burger, .sidebar").length) {
          if ($("body").hasClass("mob-menu")) {
             $("body").removeClass("mob-menu");
+         }
+      }
+   });
+}
+
+function feedback() {
+   $(".feedback__img, .popup__close").on('click', function () {
+         var $parent = $(".feedback");
+         if ($parent.hasClass('popup-open')) {
+            $parent.removeClass('popup-open');
+         } else {
+            $parent.addClass('popup-open');
+         }
+   }); 
+   $("html").on('click', function(event) {
+      if (!$(event.target).closest(".feedback__img, .popup__close, .feedback__popup").length) {
+         if ($(".feedback").hasClass("popup-open")) {
+            $(".feedback").removeClass("popup-open");
          }
       }
    });
@@ -58,11 +77,11 @@ function searchHint() {
       }
    });
    $(".offer__input").on('click', function () {
-         var $parent = $(".offer");
-         if ($parent.hasClass('hint-show')) {
-            $parent.removeClass('hint-show');
+         if ($(this).parent().hasClass('hint-show')) {
+            $(this).parent().removeClass('hint-show');
          } else {
-            $parent.addClass('hint-show');
+            $(".offer").removeClass('hint-show');
+            $(this).parent().addClass('hint-show');
          }
    }); 
    $(".wrapper").on('click', function(event) {
